@@ -1,0 +1,53 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <title>Wherever you go, there you are</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .coordDisplay{
+            display: flex;
+            margin: 10px;
+        }
+        .apply{
+            width: 100px;
+            height: 30px;
+        }
+        #map{
+            width: 900px !important;
+            height: 400px !important;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="button" id="watch" value="Watch me">
+        <input type="button" id="clearWatch" value="Clear watch">
+    </form>
+    <div id="location">
+        Your location will go here.
+    </div>
+    <div id="distance">
+        Distance from college will go here.
+    </div>
+    <div id="map" style="height: 180px; width:500px;"></div>
+    <div class="coordDisplay">
+        <p>latitude:</p>
+        <input type="number" id="latitude">
+    </div>
+    <div class="coordDisplay">
+        <p>longitude:</p>
+        <input type="number" id="longitude">  
+    </div>
+    
+    <p><button id="apply" class="apply">Apply</button></p>
+    <script src="script.js"></script>
+</body>
+</html>
